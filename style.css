@@ -736,6 +736,7 @@ textarea {
     .text-wrapper p {
         width: 600px;
         font-size: 2rem;
+        text-align: center;
     }
 
     .box1, .box2, .box3 {
@@ -746,6 +747,7 @@ textarea {
         gap: 3rem;
         margin: 10rem auto 0;
     }
+    
 }
 
 @media screen and (max-width: 951px) { 
@@ -784,16 +786,25 @@ textarea {
         display: block;
     }
 
+    .header {
+        justify-content: space-between;
+    }
+
     .header nav {
         position: static;
+        margin-right: 87px;
     }
-    #nav.active #list {
-        display: flex;
+
+    .header nav button {
+        border: none;
+        background: none;
     }
+
     #nav #list {
-        display: flex;
+        display: block;
+        visibility: hidden;
+        height: 0px;
         gap: 2rem;
-        flex-direction: column;
         position: absolute;
         width: 100%;
         z-index: 1000;
@@ -802,9 +813,24 @@ textarea {
         margin: 0 auto;
         right: 0rem;
         text-align: center;
-        background: black;
+        background: rgb(128, 128, 127);
+        overflow-y: hidden;
+        transition: .6s;
     }
+
+    #nav.active #list {
+        visibility: visible;
+        height: 250px;
+    }
+
+    #list li {
+        padding: 2rem;
+    }
+
     #list button {
+        display: none;
+    }
+    #list li + li + li + li {
         display: none;
     }
 
@@ -816,4 +842,49 @@ textarea {
         padding: 2rem;
     }
 
+    .bar1, .bar2, .bar3 {
+        width: 3rem;
+        height: 4px;
+        opacity: 0.8;
+        margin: 6px auto;
+        transition: 0.4s;
+        background-color: black;
+     }
+    
+    #nav.active .bar1 {
+        transform: translate(0, 10px) rotate(-45deg);
+    }
+      
+    #nav.active .bar2 {
+        opacity: 0;
+    }
+      
+    #nav.active .bar3 {
+        transform: translate(0, -10px) rotate(45deg);
+    }
 } 
+
+@media screen and (max-width: 940px) {
+    .aboutSection {
+        height: 115rem;
+    }
+
+    .boxes-wrapper {
+        margin-top: 35rem;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .box1, .box2, .box3 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .boxes-wrapper h4 {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    
+}

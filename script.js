@@ -48,7 +48,9 @@ const btnMobile = document.getElementById('btnMobile')
 const nav = document.querySelector('nav')
 
 btnMobile.addEventListener('click', toggleMenu)
+btnMobile.addEventListener('touchstart', toggleMenu)
 
 function toggleMenu() {
+    if (event.type === 'touchstart') event.preventDefault()
     nav.classList.toggle('active')
 }
