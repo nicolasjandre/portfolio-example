@@ -41,3 +41,14 @@ function mouseUpAndLeave() {
 
 projectWrapper.onmouseup = mouseUpAndLeave
 projectWrapper.onmouseleave = mouseUpAndLeave
+
+// BTN MOBILE
+
+const btnMobile = document.getElementById('btnMobile')
+const nav = document.querySelector('nav')
+
+btnMobile.addEventListener('click', toggleMenu)
+
+function toggleMenu() {
+    nav.classList.toggle('active')
+}

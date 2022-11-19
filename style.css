@@ -23,7 +23,6 @@ main {
 }
 
 .header {
-    position: relative;
     width: 100%;
     height: 90px;
     background: linear-gradient(214.02deg, rgba(0, 0, 0, 0.5) 6.04%, rgba(0, 0, 0, 0.5) 92.95%);
@@ -90,6 +89,10 @@ main {
     transition: .3s;
 }
 
+#btnMobile {
+    display: none;
+}
+
 .mainSection {
     width: 100%;
     height: 965px;
@@ -147,8 +150,6 @@ main {
 
 .main-section-pic-bg {
     position: absolute;
-    width: 300px;
-    height: 300px;
     top: 5rem;
     left: 20.5rem;
     z-index: -1;
@@ -175,6 +176,7 @@ main {
 .aboutSection {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
     height: 650px;
     background: linear-gradient(214.02deg, rgba(0, 0, 0, 0.5) 6.04%, rgba(0, 0, 0, 0.5) 92.95%);
@@ -185,7 +187,7 @@ main {
     margin: 7rem auto 0;
     gap: 6.5rem;
     max-width: 130rem;
-    height: 324px;
+    max-height: 324px;
 }
 
 .text-wrapper h1 {
@@ -445,12 +447,12 @@ main {
 }
 
 .arrow.prev {
-    left: -3.2rem;
+    left: 0rem;
     border-radius: 6px 0px 0px 6px;
 }
 
 .arrow.next {
-    right: -3.2rem;
+    right: 0rem;
     border-radius: 0 6px 6px 0;
 }
 
@@ -590,6 +592,7 @@ form {
     background: linear-gradient(214.02deg, #5E546D 6.04%, #000000 57.64%, #514D4D 89.78%);
     border-radius: 30px;
     cursor: pointer;
+    border: none;
 }
 
 .column-2-container button:hover {
@@ -656,4 +659,161 @@ textarea {
     .boxes-wrapper {
         gap: 10rem;
     }
+
+    .text-wrapper {
+        max-width: 100rem;
+    }
+    
+    .text-wrapper h1 {
+        font-size: 8rem;
+    }
+
+    .text-wrapper p {
+        font-size: 2.4rem;
+    }
+
+    .card3 {
+        margin-left: 3rem;
+    }
 }
+
+@media screen and (max-width: 1170px) {
+    .boxes-wrapper h3 {
+        font-size: 3rem;
+    }
+
+    .boxes-wrapper h4 {
+        font-size: 2rem;
+        width: 11rem;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .mainSection h1 {
+        max-width: 900px;
+    }
+
+    .helpSection {
+        flex-direction: column;
+        height: auto;
+        padding: 10rem 0 13.5rem 0;
+    }
+
+    .helpSection .container {
+        margin-bottom: 5rem;
+        gap: 3rem;
+    }
+
+    .card3 {
+        margin: auto;
+    }
+
+    .card4 {
+        margin: 2rem auto;
+    }
+
+    .column-1-container {
+        margin-left: 2rem;
+    }
+
+    .column-2-container{
+        margin-right: 2rem;
+    }
+
+    .aboutSection {
+        height: 72rem;
+    }
+
+    .aboutSection .text-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-wrapper h1 {
+        max-width: 500px;
+    }
+
+    .text-wrapper p {
+        width: 600px;
+        font-size: 2rem;
+    }
+
+    .box1, .box2, .box3 {
+        gap: 1rem;
+    }
+
+    .boxes-wrapper {
+        gap: 3rem;
+        margin: 10rem auto 0;
+    }
+}
+
+@media screen and (max-width: 951px) { 
+    .arrow {
+        display: none;
+    }
+
+    .languages-wrapper {
+        width: 200px;
+        height: 70px;
+    }
+
+    .languages-wrapper h2, .languages-wrapper span {
+        font-size: 1.6rem;
+    }
+
+    .myPicture img {
+        width: auto;
+        height: 80%;
+    }
+
+    .main-section-pic-bg {
+        top: 5rem;
+        left: 20rem;
+        height: 270px;
+    }
+
+    .mainSection h1 {
+        font-size: 3.7rem;
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    #btnMobile {
+        display: block;
+    }
+
+    .header nav {
+        position: static;
+    }
+    #nav.active #list {
+        display: flex;
+    }
+    #nav #list {
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        z-index: 1000;
+        top: 9rem;
+        left: 0rem;
+        margin: 0 auto;
+        right: 0rem;
+        text-align: center;
+        background: black;
+    }
+    #list button {
+        display: none;
+    }
+
+    #list li + li + li {
+        margin: 0;
+    }
+
+    #list a {
+        padding: 2rem;
+    }
+
+} 
