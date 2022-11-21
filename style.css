@@ -141,7 +141,7 @@ main {
 }
 
 .first {
-    margin: 13rem 1.5rem 0 0;
+    margin: 13rem 1.5rem 0 1rem;
 }
 
 .second {
@@ -321,7 +321,6 @@ main {
 }
 
 .card3 h1 {
-    padding-top: 1.5rem;
     font-weight: 600;
     font-size: 5rem;
     line-height: 5rem;
@@ -333,7 +332,7 @@ main {
     font-weight: 400;
     font-size: 2rem;
     line-height: 180%;
-    margin-top: 1rem;
+    margin: 2rem auto 0;
     max-width: 482px;
     text-align: center;
 }
@@ -419,6 +418,7 @@ main {
 
 .quoteSection p.quote1 {
     margin: 1.5rem auto;
+    padding: 0 2rem;
     font-weight: 500;
     font-size: 20px;
     line-height: 120%;
@@ -541,7 +541,7 @@ main {
 
 .footer {
     width: 100%;
-    height: 1014px;
+    min-height: 1014px;
     background: #000000;
 }
 
@@ -568,6 +568,10 @@ form {
     align-items: center;
 }
 
+.column-1-container-mobile {
+    display: none;
+}
+
 .column-1-container, .column-2-container {
     position: relative;
     width: 500px;
@@ -581,7 +585,7 @@ form {
     right: 0;
 }
 
-.column-2-container button {
+.column-2-container button, .column-1-container-mobile button {
     color: white;
     bottom: 0;
     display: flex;
@@ -595,7 +599,7 @@ form {
     border: none;
 }
 
-.column-2-container button:hover {
+.column-2-container button:hover, .column-1-container-mobile button:hover {
     background: linear-gradient(214.02deg, #ded9e6 6.04%, #3e3c3c 57.64%, #0b0707 89.78%);
 }
 
@@ -653,6 +657,7 @@ textarea {
     font-weight: 500;
     font-size: 2rem;
     color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 2rem;
 }
 
 @media screen and (max-width: 1310px) {
@@ -691,15 +696,17 @@ textarea {
 @media screen and (max-width: 1040px) {
     .mainSection h1 {
         max-width: 900px;
+        padding: 0 2rem;
     }
 
     .helpSection {
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: auto;
         padding: 10rem 0 13.5rem 0;
     }
 
     .helpSection .container {
+        margin-top: 10rem;
         margin-bottom: 5rem;
         gap: 3rem;
     }
@@ -734,7 +741,7 @@ textarea {
     }
 
     .text-wrapper p {
-        width: 600px;
+        max-width: 600px;
         font-size: 2rem;
         text-align: center;
     }
@@ -778,6 +785,10 @@ textarea {
     .mainSection h1 {
         font-size: 3.7rem;
         max-width: 600px;
+    }
+
+    .mainSection {
+        height: 80rem;
     }
 }
 
@@ -886,5 +897,209 @@ textarea {
 }
 
 @media screen and (max-width: 860px) {
+    .column-1-container, .column-2-container {
+        display: none;
+    }
+
+    .column-1-container-mobile {
+        display: block;
+        margin-top: 7rem;
+    }
+
+    .column-1-container-mobile button {
+        margin: 7rem auto 0;
+    }
+}
+
+@media screen and (max-width: 631px) {
+
+    .mainSection {
+        height: 84rem;
+    }
+
+    .first.languages-wrapper, .second.languages-wrapper {
+        display: none;
+    }
+
+    .mainSection h1 {
+        max-width: 50rem;
+    }
+
+    .footer h1 {
+        font-size: 4rem;
+        margin-top: 3rem
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .quoteSection img {
+        padding-bottom: 8.5rem;
+    }
     
+    .quoteSection {
+        height: auto;
+    }
+
+    .helpSection {
+        padding: 7rem 0 10.5rem;
+    }
+
+    .helpSection .container {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .aboutSection span {
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    
+    .helpSection h1 {
+        font-size: 4rem;
+    }
+
+    .last-card {
+        text-align: center;
+    }
+
+    .last-card h2 {
+        font-size: 2.5rem;
+    }
+
+    .main-section-pic-bg {
+        display: none;
+    }
+
+    .aboutSection {
+        height: 100rem;
+    }
+
+    .aboutSection h1 {
+        font-size: 6rem;
+    }
+
+    .aboutSection p {
+        font-size: 1.6rem;
+        padding: 0 1rem;
+    }
+
+    .boxes-wrapper {
+        margin-top: 25rem;
+    }
+
+    .text-wrapper {
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .mainSection {
+        height: 90rem;
+    }
+
+    .header .logo, #nav {
+        margin: 0 2rem 0 2rem;
+    }
+
+    .mainSection h1 {
+        margin: 3rem auto;
+    }
+}
+
+@media screen and (max-width: 419px) {
+    input, textarea {
+        width: 100%;
+    }
+
+    .boxes-wrapper {
+        margin-top: 26rem;
+    }
+
+    .column-1-container-mobile {
+        width: 95%;
+    }
+
+    .mainSection img {
+        padding: 0 2rem;
+    }
+
+    .myPicture {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 377px) {
+    .helpSection .container {
+        margin-top: 18rem;
+    }
+    
+    .projects {
+        height: auto;
+    }
+
+    .projects h1 {
+        margin-top: 2.4rem;
+        font-size: 4rem;
+        padding: 0 2rem;
+    }
+
+    .last-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .last-card h2 + h2 {
+        margin: 0;
+    }
+
+    .myPicture img {
+        width: 100%;
+        height: 95%;
+    }
+
+    .mainSection {
+        height: auto;
+    }
+
+    .mainSection h1 {
+        font-size: 3.1rem;
+    }
+
+    .aboutSection h1 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 336px) {
+    .boxes-wrapper {
+        margin-top: 29rem;
+    }
+
+    .helpSection .container {
+        margin-top: 20rem;
+    }
+
+    .aboutSection {
+        height: 103rem;
+    }
+
+    .socialSection {
+        gap: 3rem;
+    }
+
+    .footer h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .boxes-wrapper {
+        margin-top: 31rem;
+    }
+
+        .helpSection .container {
+        margin-top: 24rem;
+    }
 }
